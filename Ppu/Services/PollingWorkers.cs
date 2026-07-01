@@ -67,7 +67,7 @@ public sealed class  PollingWorker : BackgroundService
                 _logger.LogError(ex, "Unpandled error during PLC read");
             }
             await Task.Delay(
-                TimeSpan.FromSeconds(_options.PollIntervalSeconds),
+                TimeSpan.FromSeconds(_options.PollIntervalSecond),
                 stoppingToken);
         }
         _logger.LogInformation("PPU Logging Stopped");
